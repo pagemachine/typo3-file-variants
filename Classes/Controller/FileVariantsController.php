@@ -48,7 +48,7 @@ class FileVariantsController
         $uid = (int)$request->getQueryParams()['uid'];
 
         $formDataGroup = GeneralUtility::makeInstance(TcaDatabaseRecord::class);
-        $formDataCompiler = GeneralUtility::makeInstance(FormDataCompiler::class, $formDataGroup);
+        $formDataCompiler = GeneralUtility::makeInstance(FormDataCompiler::class);
         $nodeFactory = GeneralUtility::makeInstance(NodeFactory::class);
         $formDataCompilerInput = [
             'request' => $request,
@@ -56,7 +56,7 @@ class FileVariantsController
             'vanillaUid' => $uid,
             'command' => 'edit',
         ];
-        $formData = $formDataCompiler->compile($formDataCompilerInput);
+        $formData = $formDataCompiler->compile($formDataCompilerInput, $formDataGroup);
         $formData['renderType'] = 'fileInfo';
 
         $fileUid = (int)($formData['databaseRow']['file'][0] ?? 0);
@@ -145,7 +145,7 @@ class FileVariantsController
             'vanillaUid' => $metadataUid,
             'command' => 'edit',
         ];
-        $formData = $formDataCompiler->compile($formDataCompilerInput);
+        $formData = $formDataCompiler->compile($formDataCompilerInput, $formDataGroup);
         $formData['renderType'] = 'fileInfo';
 
         $formResult = $nodeFactory->create($formData)->render();
