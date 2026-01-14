@@ -25,9 +25,9 @@ namespace T3G\AgencyPack\FileVariants\Tests\Functional;
 use Prophecy\PhpUnit\ProphecyTrait;
 use T3G\AgencyPack\FileVariants\Tests\Functional\DataHandling\PermissiveActionService;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
-use TYPO3\CMS\Core\Core\Bootstrap;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\Connection;
+use TYPO3\CMS\Core\Localization\LanguageServiceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -74,10 +74,9 @@ abstract class FunctionalTestCase extends \TYPO3\TestingFramework\Core\Functiona
             system('rm -rf ' . escapeshellarg(Environment::getPublicPath() . '/languageVariants'));
         }
 
-        Bootstrap::initializeLanguageObject();
-
         $this->importCSVDataSet(__DIR__ . '/Fixture/be_users.csv');
         $this->backendUser = $this->setUpBackendUser(1);
+        $GLOBALS['LANG'] = $this->get(LanguageServiceFactory::class)->createFromUserPreferences($this->backendUser);
 
         $this->actionService = new PermissiveActionService();
 
