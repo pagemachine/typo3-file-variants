@@ -22,6 +22,9 @@ return RectorConfig::configure()
     ])
     ->withRootFiles()
     ->withPhpSets()
+    ->withAttributesSets(
+        phpunit: true,
+    )
     ->withSets([
         Typo3SetList::TYPO3_12,
     ])

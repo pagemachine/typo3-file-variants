@@ -34,9 +34,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class ConcerningFileReferences extends FunctionalTestCase
 {
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function deleteTranslatedMetadataResetsConsumingReferencesToDefaultFile()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -66,9 +64,7 @@ class ConcerningFileReferences extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function translateMetadataUpdatesConsumingReferences()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -82,9 +78,7 @@ class ConcerningFileReferences extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function translatingConsumingRecordInConnectedModeProvidesLanguageVariantForLanguage()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -107,9 +101,7 @@ class ConcerningFileReferences extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function translatingConsumingRecordInFreeModeProvidesLanguageVariantForLanguage()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -128,9 +120,7 @@ class ConcerningFileReferences extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function translatingConsumingRecordFromNonDefaultLanguageProvidesLanguageVariant()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -149,9 +139,7 @@ class ConcerningFileReferences extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function copyConsumingRecordFromNonDefaultLanguageProvidesLanguageVariant()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -170,9 +158,7 @@ class ConcerningFileReferences extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function translatingConsumingRecordThatIsNotTtContentWorksLikeConnectedMode()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];

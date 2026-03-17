@@ -38,9 +38,7 @@ class DataHandlerHookTest extends TestCase
 {
     use ProphecyTrait;
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function constructThrowsExceptionIfNoConfigurationCanBeFound()
     {
         $this->expectException(\RuntimeException::class);
@@ -53,9 +51,7 @@ class DataHandlerHookTest extends TestCase
         new DataHandlerHook();
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function hookThrowsExceptionIfNoValidIdIsFound()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['foo'];
