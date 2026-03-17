@@ -189,7 +189,7 @@ class ConcerningMetadata extends FunctionalTestCase
                 'data' => [
                     'delete' => [
                         [
-                            'data' => $file->getUid(),
+                            'data' => (string)$file->getUid(),
                         ],
                     ],
                 ],
