@@ -10,7 +10,7 @@ declare(strict_types=1);
  */
 
 use Rector\Config\RectorConfig;
-use Ssch\TYPO3Rector\Set\Typo3SetList;
+use Ssch\TYPO3Rector\Set\Typo3LevelSetList;
 use Ssch\TYPO3Rector\TYPO312\v3\MigrateItemsIndexedKeysToAssociativeRector;
 
 return RectorConfig::configure()
@@ -30,7 +30,7 @@ return RectorConfig::configure()
         phpunit: true,
     )
     ->withSets([
-        Typo3SetList::TYPO3_12,
+        Typo3LevelSetList::UP_TO_TYPO3_13,
     ])
     ->withSkip([
         MigrateItemsIndexedKeysToAssociativeRector::class,
