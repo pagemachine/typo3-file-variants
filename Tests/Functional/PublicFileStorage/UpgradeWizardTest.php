@@ -9,6 +9,7 @@
 
 namespace T3G\AgencyPack\FileVariants\Tests\Functional\PublicFileStorage;
 
+use PHPUnit\Framework\Attributes\Test;
 use T3G\AgencyPack\FileVariants\Tests\Functional\FunctionalTestCase;
 use T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard;
 use TYPO3\CMS\Core\Core\Environment;
@@ -29,7 +30,7 @@ class UpgradeWizardTest extends FunctionalTestCase
      */
     protected $assertionDataSetDirectory = 'typo3conf/ext/file_variants/Tests/Functional/PublicFileStorage/DataSet/UpgradeWizard/AfterOperation/';
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function runWizard()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 5, 'variantsFolder' => 'languageVariants'];
