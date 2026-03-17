@@ -9,6 +9,7 @@
 
 namespace T3G\AgencyPack\FileVariants\Service;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
@@ -18,7 +19,7 @@ class ResourcesServiceTest extends TestCase
 {
     use ProphecyTrait;
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function prepareFileStorageEnvironmentThrowsExceptionForNotAvailableStorageUid()
     {
         $this->expectException(\RuntimeException::class);

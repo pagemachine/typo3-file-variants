@@ -22,6 +22,7 @@ namespace T3G\AgencyPack\FileVariants\Tests\Functional;
  *
  * The TYPO3 project - inspiring people to share!
  */
+use PHPUnit\Framework\Attributes\Test;
 use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Http\ServerRequest;
@@ -39,7 +40,7 @@ use T3G\AgencyPack\FileVariants\Controller\FileVariantsController;
 class ConcerningMetadata extends FunctionalTestCase
 {
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function exceptionIsThrownForBadStorageConfiguration()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 42];
@@ -51,7 +52,7 @@ class ConcerningMetadata extends FunctionalTestCase
         $subject->processCmdmap_postProcess('localize', 'sys_file_metadata', '1', 'foo', $dataHandler->reveal());
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function defaultStorageIsUsedIfNoneIsConfigured()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 0, 'variantsFolder' => 'languageVariants'];
@@ -65,7 +66,7 @@ class ConcerningMetadata extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function configuredStorageIsUsed()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -79,7 +80,7 @@ class ConcerningMetadata extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function translationOfMetadataCreatesLocalizedFileRecord()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -93,7 +94,7 @@ class ConcerningMetadata extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function uploadingVariantReplacesFileWithoutChangingUid()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -121,7 +122,7 @@ class ConcerningMetadata extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function replacingVariantReplacesFileWithoutChangingUid()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -149,7 +150,7 @@ class ConcerningMetadata extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function resetVariantReplacesFileWithoutChangingUid()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];
@@ -170,7 +171,7 @@ class ConcerningMetadata extends FunctionalTestCase
         $this->importAssertCSVScenario($scenarioName);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function fileDeletionRemovesAllRelatedFilesAndMetadata()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 2, 'variantsFolder' => 'languageVariants'];

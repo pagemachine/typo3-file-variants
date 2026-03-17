@@ -22,7 +22,7 @@ namespace T3G\AgencyPack\FileVariants\Tests\Unit\DataHandler;
  *
  * The TYPO3 project - inspiring people to share!
  */
-
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use T3G\AgencyPack\FileVariants\DataHandler\DataHandlerHook;
@@ -38,7 +38,7 @@ class DataHandlerHookTest extends TestCase
 {
     use ProphecyTrait;
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function constructThrowsExceptionIfNoConfigurationCanBeFound()
     {
         $this->expectException(\RuntimeException::class);
@@ -51,7 +51,7 @@ class DataHandlerHookTest extends TestCase
         new DataHandlerHook();
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function hookThrowsExceptionIfNoValidIdIsFound()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['foo'];
