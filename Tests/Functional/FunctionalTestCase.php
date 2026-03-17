@@ -161,7 +161,7 @@ abstract class FunctionalTestCase extends \TYPO3\TestingFramework\Core\Functiona
         } else {
             $failureMessage = 'Expected ' . $this->expectedErrorLogEntries . ' entries in sys_log, but got ' . $actualErrorLogEntries . LF;
             while ($entry = $statement->fetchAssociative()) {
-                $entryData = unserialize($entry['log_data']);
+                $entryData = json_decode((string) $entry['log_data'], true);
                 $entryMessage = vsprintf($entry['details'], $entryData);
                 $failureMessage .= '* ' . $entryMessage . LF;
             }
