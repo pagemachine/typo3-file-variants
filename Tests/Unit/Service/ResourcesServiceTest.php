@@ -18,9 +18,7 @@ class ResourcesServiceTest extends TestCase
 {
     use ProphecyTrait;
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function prepareFileStorageEnvironmentThrowsExceptionForNotAvailableStorageUid()
     {
         $this->expectException(\RuntimeException::class);

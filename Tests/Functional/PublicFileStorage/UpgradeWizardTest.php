@@ -29,9 +29,7 @@ class UpgradeWizardTest extends FunctionalTestCase
      */
     protected $assertionDataSetDirectory = 'typo3conf/ext/file_variants/Tests/Functional/PublicFileStorage/DataSet/UpgradeWizard/AfterOperation/';
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function runWizard()
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['file_variants'] = ['variantsStorageUid' => 5, 'variantsFolder' => 'languageVariants'];
