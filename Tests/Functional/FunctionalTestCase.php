@@ -28,8 +28,6 @@ use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Core\Bootstrap;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\Connection;
-use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Resource\Security\FileMetadataPermissionsAspect;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -101,38 +99,9 @@ abstract class FunctionalTestCase extends \TYPO3\TestingFramework\Core\Functiona
 
     protected function tearDown(): void
     {
-        $this->cleanUpFilesAndRelatedRecords();
         unset($this->actionService);
         $this->assertErrorLogEntries();
         parent::tearDown();
-    }
-
-    /**
-     * remove files and related records (sys_file, sys_file_metadata) from environment
-     */
-    protected function cleanUpFilesAndRelatedRecords()
-    {
-        // find all storages used
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('sys_file_storage');
-        $result = $queryBuilder->select('*')->from('sys_file_storage')->executeQuery();
-        while ($storageUid = $result->fetchAssociative()['uid']) {
-            // find files in storage
-            $storage = GeneralUtility::makeInstance(ResourceFactory::class)->getStorageObject($storageUid);
-            $recordsToDelete = ['sys_file' => [], 'sys_file_metadata' => []];
-            try {
-                $folder = $storage->getFolder('languageVariants');
-                $files = $storage->getFilesInFolder($folder);
-                foreach ($files as $file) {
-                    $storage->deleteFile($file);
-                    $recordsToDelete['sys_file'][] = $file->getUid();
-                    $fileMetadata = $file->getMetaData()->get();
-                    $recordsToDelete['sys_file_metadata'][] = (int)$fileMetadata['uid'];
-                }
-            } catch (\Exception) {
-                // sometimes, there is no folder to empty. Let's ignore that.
-            }
-            $this->actionService->deleteRecords($recordsToDelete);
-        }
     }
 
     /**
