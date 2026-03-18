@@ -91,7 +91,6 @@ abstract class FunctionalTestCase extends \TYPO3\TestingFramework\Core\Functiona
 
     protected function tearDown(): void
     {
-        unset($this->actionService);
         $this->assertErrorLogEntries();
         parent::tearDown();
     }
