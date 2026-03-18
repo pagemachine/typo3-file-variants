@@ -28,7 +28,6 @@ use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Core\Bootstrap;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\Connection;
-use TYPO3\CMS\Core\Resource\Security\FileMetadataPermissionsAspect;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -79,12 +78,6 @@ abstract class FunctionalTestCase extends \TYPO3\TestingFramework\Core\Functiona
 
         $this->importCSVDataSet(__DIR__ . '/Fixture/be_users.csv');
         $this->backendUser = $this->setUpBackendUser(1);
-
-        $fileMetadataPermissionAspect = $this->prophesize(FileMetadataPermissionsAspect::class);
-        GeneralUtility::setSingletonInstance(
-            FileMetadataPermissionsAspect::class,
-            $fileMetadataPermissionAspect->reveal()
-        );
 
         $this->actionService = new PermissiveActionService();
 
