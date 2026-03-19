@@ -1,6 +1,6 @@
 import $ from "jquery";
-import FileVariantsFileQueueItem from "@t3g/file_variants/FileVariantsFileQueueItem.js";
-import FileVariantsDragUploader from "@t3g/file_variants/FileVariantsDragUploader.js";
+import FileVariantsFileQueueItem from "@pagemachine/file-variants/FileVariantsFileQueueItem.js";
+import FileVariantsDragUploader from "@pagemachine/file-variants/FileVariantsDragUploader.js";
 
 class FileVariantsDragUploaderPlugin
 {

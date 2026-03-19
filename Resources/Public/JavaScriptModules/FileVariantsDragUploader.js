@@ -14,8 +14,8 @@
 import $ from "jquery";
 import Notification from"@typo3/backend/notification.js";
 import FormEngine from"@typo3/backend/form-engine.js";
-import FileVariantsFileQueueItem from "@t3g/file_variants/FileVariantsFileQueueItem.js";
-import FileVariantsDragUploaderPlugin from "@t3g/file_variants/FileVariantsDragUploaderPlugin.js";
+import FileVariantsFileQueueItem from "@pagemachine/file-variants/FileVariantsFileQueueItem.js";
+import FileVariantsDragUploaderPlugin from "@pagemachine/file-variants/FileVariantsDragUploaderPlugin.js";
 
 /**
  * Module: TYPO3/CMS/FileVariants/FileVariantsDragUploader
