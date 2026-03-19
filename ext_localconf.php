@@ -27,5 +27,5 @@ call_user_func(function () {
     ];
 
     // Upgrade Wizard
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][MetaDataRecordsUpdateWizard::class] = MetaDataRecordsUpdateWizard::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][MetaDataRecordsUpdateWizard::IDENTIFIER] = MetaDataRecordsUpdateWizard::class;
 });
