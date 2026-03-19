@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Service;
+namespace Pagemachine\FileVariants\Service;
 
 /*
  * This file is part of the TYPO3 CMS project.

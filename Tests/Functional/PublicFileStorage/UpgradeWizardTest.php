@@ -7,11 +7,11 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Tests\Functional\PublicFileStorage;
+namespace Pagemachine\FileVariants\Tests\Functional\PublicFileStorage;
 
 use PHPUnit\Framework\Attributes\Test;
-use T3G\AgencyPack\FileVariants\Tests\Functional\FunctionalTestCase;
-use T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard;
+use Pagemachine\FileVariants\Tests\Functional\FunctionalTestCase;
+use Pagemachine\FileVariants\Updates\MetaDataRecordsUpdateWizard;
 use TYPO3\CMS\Core\Core\Environment;
 
 /**

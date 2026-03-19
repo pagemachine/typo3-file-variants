@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-use T3G\AgencyPack\FileVariants\Controller\FileVariantsController;
+use Pagemachine\FileVariants\Controller\FileVariantsController;
 
 return [
     'tx_filevariants_deleteFileVariant' => [

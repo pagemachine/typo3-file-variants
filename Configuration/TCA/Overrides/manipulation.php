@@ -11,9 +11,9 @@ defined('TYPO3') or die();
 
 call_user_func(function () {
 
-//    $persistenceService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\T3G\AgencyPack\FileVariants\Service\PersistenceService::class);
-//    /** @var \T3G\AgencyPack\FileVariants\Service\RecordService $recordService */
-//    $recordService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\T3G\AgencyPack\FileVariants\Service\RecordService::class, $persistenceService);
+//    $persistenceService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Pagemachine\FileVariants\Service\PersistenceService::class);
+//    /** @var \Pagemachine\FileVariants\Service\RecordService $recordService */
+//    $recordService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Pagemachine\FileVariants\Service\RecordService::class, $persistenceService);
 
     foreach ($GLOBALS['TCA'] as $table => $config) {
         //   if ($recordService->isFalConsumingTable($table)) {

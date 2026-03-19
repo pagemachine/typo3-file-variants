@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Tests\Unit\DataHandler;
+namespace Pagemachine\FileVariants\Tests\Unit\DataHandler;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -25,7 +25,7 @@ namespace T3G\AgencyPack\FileVariants\Tests\Unit\DataHandler;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
-use T3G\AgencyPack\FileVariants\DataHandler\DataHandlerHook;
+use Pagemachine\FileVariants\DataHandler\DataHandlerHook;
 use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\DataHandling\DataHandler;

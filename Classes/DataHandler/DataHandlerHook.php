@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\DataHandler;
+namespace Pagemachine\FileVariants\DataHandler;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -23,7 +23,7 @@ namespace T3G\AgencyPack\FileVariants\DataHandler;
  * The TYPO3 project - inspiring people to share!
  */
 use TYPO3\CMS\Core\Database\Connection;
-use T3G\AgencyPack\FileVariants\Service\ResourcesService;
+use Pagemachine\FileVariants\Service\ResourcesService;
 use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Core\Environment;

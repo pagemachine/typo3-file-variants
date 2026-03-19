@@ -7,10 +7,10 @@
  * LICENSE file that was distributed with this source code.
  */
 
-use T3G\AgencyPack\FileVariants\DataHandler\DataHandlerHook;
-use T3G\AgencyPack\FileVariants\FormEngine\FileVariantInfoElement;
-use T3G\AgencyPack\FileVariants\FormEngine\FieldWizard\FileVariantsOverviewWizard;
-use T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard;
+use Pagemachine\FileVariants\DataHandler\DataHandlerHook;
+use Pagemachine\FileVariants\FormEngine\FileVariantInfoElement;
+use Pagemachine\FileVariants\FormEngine\FieldWizard\FileVariantsOverviewWizard;
+use Pagemachine\FileVariants\Updates\MetaDataRecordsUpdateWizard;
 /*
  * This file is part of the package t3g/file_variants.
  *

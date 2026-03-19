@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Tests\Functional;
+namespace Pagemachine\FileVariants\Tests\Functional;
 
 /*
  * This file is part of the TYPO3 CMS project.

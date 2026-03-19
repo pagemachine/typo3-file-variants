@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\FormEngine;
+namespace Pagemachine\FileVariants\FormEngine;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -32,7 +32,7 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Page\JavaScriptModuleInstruction;
 use TYPO3\CMS\Backend\Form\Element\FileInfoElement;
-use T3G\AgencyPack\FileVariants\Service\ResourcesService;
+use Pagemachine\FileVariants\Service\ResourcesService;
 
 /**
  * Description

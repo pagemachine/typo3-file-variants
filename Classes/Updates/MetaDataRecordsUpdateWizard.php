@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Updates;
+namespace Pagemachine\FileVariants\Updates;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -22,7 +22,7 @@ namespace T3G\AgencyPack\FileVariants\Updates;
  * The TYPO3 project - inspiring people to share!
  */
 
-use T3G\AgencyPack\FileVariants\Service\ResourcesService;
+use Pagemachine\FileVariants\Service\ResourcesService;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

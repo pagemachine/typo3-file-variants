@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Tests\Functional;
+namespace Pagemachine\FileVariants\Tests\Functional;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -31,8 +31,8 @@ use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Http\ServerRequestFactory;
 use TYPO3\CMS\Backend\Controller\File\FileController;
-use T3G\AgencyPack\FileVariants\DataHandler\DataHandlerHook;
-use T3G\AgencyPack\FileVariants\Controller\FileVariantsController;
+use Pagemachine\FileVariants\DataHandler\DataHandlerHook;
+use Pagemachine\FileVariants\Controller\FileVariantsController;
 
 /**
  * Class ConcerningMetadata

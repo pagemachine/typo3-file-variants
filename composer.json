@@ -32,12 +32,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"T3G\\AgencyPack\\FileVariants\\": "Classes/"
+			"Pagemachine\\FileVariants\\": "Classes/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"T3G\\AgencyPack\\FileVariants\\Tests\\": "Tests/"
+			"Pagemachine\\FileVariants\\Tests\\": "Tests/"
 		}
 	},
 	"config": {
