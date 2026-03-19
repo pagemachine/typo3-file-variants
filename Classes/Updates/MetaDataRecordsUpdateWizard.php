@@ -7,6 +7,7 @@ use Pagemachine\FileVariants\Service\ResourcesService;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Install\Attribute\UpgradeWizard;
 use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
@@ -18,21 +19,9 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
  *
  * Class MetaDataRecordsUpdateWizard
  */
+#[UpgradeWizard('T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard')]
 class MetaDataRecordsUpdateWizard implements UpgradeWizardInterface
 {
-    public const IDENTIFIER = 'T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard';
-
-    /**
-     * Return the identifier for this wizard
-     * This should be the same string as used in the ext_localconf class registration
-     *
-     * @return string
-     */
-    public function getIdentifier(): string
-    {
-        return self::IDENTIFIER;
-    }
-
     /**
      * Return the speaking name of this wizard
      *
