@@ -1,22 +1,9 @@
 <?php
 
-/*
- * This file is part of the package t3g/file_variants.
- *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
- */
-
 use Pagemachine\FileVariants\DataHandler\DataHandlerHook;
 use Pagemachine\FileVariants\FormEngine\FileVariantInfoElement;
 use Pagemachine\FileVariants\FormEngine\FieldWizard\FileVariantsOverviewWizard;
 use Pagemachine\FileVariants\Updates\MetaDataRecordsUpdateWizard;
-/*
- * This file is part of the package t3g/file_variants.
- *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
- */
 
 if (!defined('TYPO3')) {
     die('Access denied!');
