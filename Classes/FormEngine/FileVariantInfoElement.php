@@ -38,10 +38,10 @@ class FileVariantInfoElement extends FileInfoElement
             } else {
                 GeneralUtility::makeInstance(PageRenderer::class)->addInlineLanguageLabelFile('EXT:file_variants/Resources/Private/Language/locallang.xlf');
                 $resultArray['javaScriptModules'][] = JavaScriptModuleInstruction::create(
-                    '@t3g/file_variants/FileVariantsDragUploader.js'
+                    '@pagemachine/file-variants/FileVariantsDragUploader.js'
                 )->invoke('initialize');
                 $resultArray['javaScriptModules'][] = JavaScriptModuleInstruction::create(
-                    '@t3g/file_variants/FileVariants.js'
+                    '@pagemachine/file-variants/FileVariants.js'
                 )->invoke('initialize');
 
                 $resultArray['stylesheetFiles'][] = 'EXT:file_variants/Resources/Public/Css/FileVariantInfoElement.css';

@@ -15,7 +15,7 @@ import $ from "jquery";
 import Modal from"@typo3/backend/modal.js";
 import Severity from"@typo3/backend/severity.js";
 import Notification from"@typo3/backend/notification.js";
-import FileVariantsDragUploader from "@t3g/file_variants/FileVariantsDragUploader.js";
+import FileVariantsDragUploader from "@pagemachine/file-variants/FileVariantsDragUploader.js";
 
 /**
  * Module: TYPO3/CMS/FileVariants/FileVariants
