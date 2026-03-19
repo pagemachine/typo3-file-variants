@@ -3,7 +3,6 @@
 use Pagemachine\FileVariants\DataHandler\DataHandlerHook;
 use Pagemachine\FileVariants\FormEngine\FileVariantInfoElement;
 use Pagemachine\FileVariants\FormEngine\FieldWizard\FileVariantsOverviewWizard;
-use Pagemachine\FileVariants\Updates\MetaDataRecordsUpdateWizard;
 
 if (!defined('TYPO3')) {
     die('Access denied!');
@@ -25,7 +24,4 @@ call_user_func(function () {
         'priority' => 40,
         'class' => FileVariantsOverviewWizard::class,
     ];
-
-    // Upgrade Wizard
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][MetaDataRecordsUpdateWizard::IDENTIFIER] = MetaDataRecordsUpdateWizard::class;
 });
