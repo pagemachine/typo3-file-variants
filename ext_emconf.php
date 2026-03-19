@@ -23,8 +23,6 @@ $EM_CONF[$_EXTKEY] = [
         ],
     ],
     'state' => 'stable',
-    'author' => 'Anja Leichsenring',
-    'author_email' => 'anja.leichsenring@typo3.com',
-    'author_company' => 'TYPO3 GmbH',
+    'author_company' => 'Pagemachine AG',
     'version' => '0.0.0',
 ];

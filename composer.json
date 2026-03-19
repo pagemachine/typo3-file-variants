@@ -1,15 +1,8 @@
 {
 	"name": "t3g/file-variants",
-	"description": "Prototype for translatable files in TYPO3",
+	"description": "Working prototype for translatable files in TYPO3",
 	"license": "GPL-2.0+",
 	"type": "typo3-cms-extension",
-	"authors": [
-		{
-			"name": "TYPO3 GmbH",
-			"homepage": "https://typo3.com/",
-			"role": "Developer"
-		}
-	],
 	"require": {
 		"php": "^8.2",
 		"psr/http-message": "^1.0 || ^2.0",
