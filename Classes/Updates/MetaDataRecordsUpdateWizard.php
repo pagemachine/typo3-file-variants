@@ -20,6 +20,8 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
  */
 class MetaDataRecordsUpdateWizard implements UpgradeWizardInterface
 {
+    public const IDENTIFIER = 'T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard';
+
     /**
      * Return the identifier for this wizard
      * This should be the same string as used in the ext_localconf class registration
@@ -28,7 +30,7 @@ class MetaDataRecordsUpdateWizard implements UpgradeWizardInterface
      */
     public function getIdentifier(): string
     {
-        return self::class;
+        return self::IDENTIFIER;
     }
 
     /**
