@@ -1,28 +1,20 @@
 <?php
 
-/*
- * This file is part of the package t3g/file_variants.
- *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
- */
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Translatable files',
     'description' => 'Files can present their language variants and use them',
     'category' => 'extension',
+    'author_company' => 'Pagemachine AG',
+    'state' => 'stable',
+    'version' => '0.0.0',
     'constraints' => [
         'depends' => [
             'typo3' => '12.4.0-13.4.99'
         ],
-        'conflicts' => [],
     ],
     'autoload' => [
         'psr-4' => [
             'T3G\\AgencyPack\\FileVariants\\' => 'Classes',
         ],
     ],
-    'state' => 'stable',
-    'author_company' => 'Pagemachine AG',
-    'version' => '0.0.0',
 ];
