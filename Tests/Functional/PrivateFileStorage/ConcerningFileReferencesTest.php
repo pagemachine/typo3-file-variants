@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Tests\Functional\PrivateFileStorage;
+namespace Pagemachine\FileVariants\Tests\Functional\PrivateFileStorage;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -23,7 +23,7 @@ namespace T3G\AgencyPack\FileVariants\Tests\Functional\PrivateFileStorage;
  * The TYPO3 project - inspiring people to share!
  */
 
-use T3G\AgencyPack\FileVariants\Tests\Functional\ConcerningFileReferences;
+use Pagemachine\FileVariants\Tests\Functional\ConcerningFileReferences;
 
 /**
  * Class ConcerningFileReferencesTest

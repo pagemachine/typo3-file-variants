@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Tests\Functional\DataHandling;
+namespace Pagemachine\FileVariants\Tests\Functional\DataHandling;
 
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\TestingFramework\Core\Functional\Framework\DataHandling\ActionService;

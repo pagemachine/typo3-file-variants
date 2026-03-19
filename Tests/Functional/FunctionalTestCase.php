@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace T3G\AgencyPack\FileVariants\Tests\Functional;
+namespace Pagemachine\FileVariants\Tests\Functional;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -23,7 +23,7 @@ namespace T3G\AgencyPack\FileVariants\Tests\Functional;
  * The TYPO3 project - inspiring people to share!
  */
 use Prophecy\PhpUnit\ProphecyTrait;
-use T3G\AgencyPack\FileVariants\Tests\Functional\DataHandling\PermissiveActionService;
+use Pagemachine\FileVariants\Tests\Functional\DataHandling\PermissiveActionService;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\Connection;
