@@ -1,5 +1,5 @@
 {
-	"name": "t3g/file-variants",
+	"name": "pagemachine/typo3-file-variants",
 	"description": "Working prototype for translatable files in TYPO3",
 	"license": "GPL-2.0+",
 	"type": "typo3-cms-extension",
@@ -28,6 +28,7 @@
 		"typo3/testing-framework": "^8.0 || ^9.0"
 	},
 	"replace": {
+		"t3g/file-variants": "self.version",
 		"t3g/file_variants": "self.version"
 	},
 	"autoload": {

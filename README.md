@@ -20,7 +20,8 @@ done through metadata records.
 
 ## Setup
 
-1. Install extension via Composer: `composer require t3g/file-variants`
+1. Install extension via Composer:
+   `composer require pagemachine/typo3-file-variants`
 2. Activate the extension
 3. (optional) Use the extension configuration to create a dedicated file
 storage. If you use no dedicated storage, a dedicated folder will be used in
