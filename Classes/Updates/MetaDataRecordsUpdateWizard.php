@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagemachine\FileVariants\Updates;
+namespace T3G\AgencyPack\FileVariants\Updates;
 
 
 use Pagemachine\FileVariants\Service\ResourcesService;
@@ -19,7 +19,7 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
  *
  * Class MetaDataRecordsUpdateWizard
  */
-#[UpgradeWizard('T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard')]
+#[UpgradeWizard(MetaDataRecordsUpdateWizard::class)]
 class MetaDataRecordsUpdateWizard implements UpgradeWizardInterface
 {
     /**

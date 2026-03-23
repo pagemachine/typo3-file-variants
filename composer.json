@@ -33,7 +33,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Pagemachine\\FileVariants\\": "Classes/"
+			"Pagemachine\\FileVariants\\": "Classes/",
+			"T3G\\AgencyPack\\FileVariants\\Updates\\": "Classes/Updates/"
 		}
 	},
 	"autoload-dev": {

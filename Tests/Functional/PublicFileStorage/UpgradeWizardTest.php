@@ -4,7 +4,7 @@ namespace Pagemachine\FileVariants\Tests\Functional\PublicFileStorage;
 
 use PHPUnit\Framework\Attributes\Test;
 use Pagemachine\FileVariants\Tests\Functional\FunctionalTestCase;
-use Pagemachine\FileVariants\Updates\MetaDataRecordsUpdateWizard;
+use T3G\AgencyPack\FileVariants\Updates\MetaDataRecordsUpdateWizard;
 use TYPO3\CMS\Core\Core\Environment;
 
 /**
