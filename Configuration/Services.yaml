@@ -6,6 +6,10 @@ services:
 
   Pagemachine\FileVariants\:
     resource: '../Classes/*'
+    exclude: '../Classes/Updates/*'
+
+  T3G\AgencyPack\FileVariants\Updates\:
+    resource: '../Classes/Updates/*'
 
   Pagemachine\FileVariants\EventListener\BeforeFileDeletedEventListener:
     tags:
