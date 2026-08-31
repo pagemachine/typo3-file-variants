@@ -147,9 +147,7 @@ class DataHandlerHook
         if (is_string($id) && str_contains($id, 'NEW')) {
             $id = $pObj->substNEWwithIDs[$id] ?? null;
         }
-        if ($id === null) {
-            $id = -1;
-        }
+        $id ??= -1;
         return (int)$id;
     }
 
